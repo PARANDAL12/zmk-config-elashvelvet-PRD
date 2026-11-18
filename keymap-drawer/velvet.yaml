@@ -45,7 +45,7 @@ layers:
   - {t: X, s: Meh+N}
   - {t: C, s: Ctl+Sft+C}
   - {t: V, s: Sft+Ctl+V}
-  - '&mkp LCLK'
+  - {t: LAYER5, h: to}
   - B
   - N
   - M
@@ -57,10 +57,10 @@ layers:
   - {t: '$$mdi:backspace-outline$$', type: backspace}
   - {t: '$$mdi:keyboard-space$$', h: FN}
   - {t: '$$mdi:keyboard-return$$', h: NUM}
-  - {t: '$$mdi:keyboard-return$$', h: NUM}
+  - '&mkp LCLK'
   - {t: '$$mdi:keyboard-space$$', h: FN}
   - {t: '$$mdi:backspace-outline$$', type: backspace}
-  - {t: NUM, h: to}
+  - '&mkp RCLK'
   - {t: GAME, h: to}
   NUM:
   - {t: ▽, type: trans}
@@ -119,7 +119,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
-  - {t: '&mkp LCLK', type: held alternate}
+  - '&mkp LCLK'
   - '&mkp MCLK'
   - '&mkp RCLK'
   - {t: ▽, type: trans}
