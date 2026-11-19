@@ -160,7 +160,7 @@ layers:
   - Ctl+PgDn
   - $$mdi:arrow-left$$
   - $$mdi:arrow-down$$
-  - '6'
+  - $$mdi:arrow-right$$
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -340,7 +340,7 @@ layers:
   - {t: ▽, type: trans}
   - $$mdi:arrow-left$$
   - $$mdi:arrow-down$$
-  - '6'
+  - $$mdi:arrow-right$$
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
