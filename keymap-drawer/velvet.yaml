@@ -12,7 +12,7 @@ layers:
   - PgUp
   - PgDn
   - {t: \, s: '|'}
-  - LGUI
+  - '&tog3'
   - $$mdi:apple-keyboard-caps$$
   - B
   - {t: W, s: Sft+Ctl+S}
@@ -26,7 +26,7 @@ layers:
   - O
   - {t: '''', s: '"'}
   - {t: '[', s: '{'}
-  - {t: '$$mdi:apple-keyboard-option$$', h: EXTRA}
+  - {t: '$$mdi:apple-keyboard-option$$', h: MOUSE}
   - {t: A, h: '$$mdi:apple-keyboard-option$$'}
   - {t: S, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: D, s: Ctl+Sft+A}
@@ -45,8 +45,8 @@ layers:
   - {t: X, s: Meh+N}
   - {t: C, s: Ctl+Sft+C}
   - {t: V, s: Sft+Ctl+V}
-  - {t: LAYER5, h: to}
-  - B
+  - '&mkp LCLK'
+  - {t: B, h: SCROLL}
   - N
   - M
   - {t: ',', s: <}
@@ -57,11 +57,11 @@ layers:
   - {t: '$$mdi:backspace-outline$$', type: backspace}
   - {t: '$$mdi:keyboard-space$$', h: FN}
   - {t: '$$mdi:keyboard-return$$', h: NUM}
-  - '&mkp LCLK'
+  - {t: LCLK, h: NUM}
   - {t: '$$mdi:keyboard-space$$', h: FN}
+  - {t: '$$mdi:keyboard-return$$', type: enter}
+  - '&RCLK'
   - {t: '$$mdi:backspace-outline$$', type: backspace}
-  - '&mkp RCLK'
-  - {t: GAME, h: to}
   NUM:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -74,7 +74,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - LGUI
   - Ctl+N
   - {t: ',', s: <}
   - {t: '7', h: Sft+7, s: '&'}
@@ -119,9 +119,9 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
-  - '&mkp LCLK'
-  - '&mkp MCLK'
-  - '&mkp RCLK'
+  - {type: held alternate}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   FN:
@@ -143,7 +143,7 @@ layers:
   - F3
   - Ctl+R
   - Ctl+T
-  - '&mkp RCLK'
+  - {t: ▽, type: trans}
   - Ctl+PgUp
   - Ctl+$$mdi:arrow-up$$
   - $$mdi:arrow-up$$
@@ -156,11 +156,11 @@ layers:
   - F6
   - Ctl+F
   - Ctl+G
-  - '&mkp MCLK'
+  - {t: ▽, type: trans}
   - Ctl+PgDn
   - $$mdi:arrow-left$$
   - $$mdi:arrow-down$$
-  - $$mdi:arrow-right$$
+  - '6'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -169,7 +169,7 @@ layers:
   - F9
   - {t: Alt+3, s: Alt+#}
   - Alt+F11
-  - '&mkp LCLK'
+  - {t: ▽, type: trans}
   - Home
   - PgUp
   - '&mkp MB4'
@@ -181,9 +181,9 @@ layers:
   - {t: ▽, type: trans}
   - {type: held}
   - {t: ▽, type: trans}
-  - '&mkp LCLK'
-  - {t: '&mkp MCLK', type: held alternate}
-  - '&mkp RCLK'
+  - {t: ▽, type: trans}
+  - {type: held alternate}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   GAME:
@@ -193,11 +193,11 @@ layers:
   - {t: '3', s: '#'}
   - {t: '4', s: $}
   - {t: '5', s: '%'}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {t: '6', s: ^}
+  - {t: '7', s: '&'}
+  - {t: '8', s: '*'}
+  - {t: '9', s: (}
+  - {t: '0', s: )}
   - {t: ▽, type: trans}
   - $$mdi:keyboard-tab$$
   - Q
@@ -205,7 +205,7 @@ layers:
   - E
   - R
   - T
-  - '&mkp RCLK'
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -218,7 +218,7 @@ layers:
   - D
   - F
   - G
-  - '&mkp MCLK'
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -231,24 +231,6 @@ layers:
   - X
   - C
   - V
-  - '&mkp LCLK'
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - N
-  - M
-  - {t: '$$mdi:backspace-outline$$', type: backspace}
-  - $$mdi:keyboard-space$$
-  - {t: '$$mdi:keyboard-return$$', type: enter}
-  - {t: GAME, h: to}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  EXTRA:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -262,12 +244,30 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - B
-  - O
-  - I
-  - U
-  - Y
-  - '&mkp RCLK'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - $$mdi:apple-keyboard-option$$
+  - {t: ▽, type: trans}
+  MOUSE:
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -275,12 +275,14 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
-  - P
-  - L
-  - K
-  - J
-  - H
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&mkp MB5'
+  - '&mkp MB3'
   - '&mkp MCLK'
+  - '&mkp MCLK'
+  - '&mkp MB5'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -288,29 +290,27 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ., s: '>'}
-  - {t: ',', s: <}
-  - M
-  - N
   - {t: ▽, type: trans}
+  - '&mkp MB4'
+  - SCROLL
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&mkp MB4'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&mkp MCLK'
   - '&mkp LCLK'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  LAYER5:
+  SCROLL:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -329,7 +329,6 @@ layers:
   - $$mdi:arrow-up$$
   - PgUp
   - {t: ▽, type: trans}
-  - '&mkp RCLK'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -337,14 +336,15 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - {type: held alternate}
   - {t: ▽, type: trans}
   - $$mdi:arrow-left$$
   - $$mdi:arrow-down$$
-  - $$mdi:arrow-right$$
+  - '6'
   - {t: ▽, type: trans}
-  - '&mkp MCLK'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - '&mkp MB5'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -354,8 +354,10 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - {type: held alternate}
   - {t: ▽, type: trans}
-  - '&mkp LCLK'
+  - {type: held}
+  - '&mkp MB4'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -370,9 +372,9 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  RIGHT:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  LAYER6:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -385,14 +387,23 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - O
+  - I
+  - U
+  - Y
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - '&mkp RCLK'
   - {t: ▽, type: trans}
+  - {t: \, s: '|'}
+  - {t: '''', s: '"'}
+  - L
+  - K
+  - J
+  - H
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -401,33 +412,22 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - P
+  - LESS
+  - M
+  - N
+  - B
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - '&mkp MCLK'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - '&mkp LCLK'
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - '{'
+  - '}'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
