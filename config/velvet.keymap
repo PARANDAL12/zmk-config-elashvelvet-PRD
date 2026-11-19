@@ -314,7 +314,7 @@
 &trans     &trans     &trans                     &trans                     &trans                     &trans                    &trans             &trans            &trans          &trans              &trans   &kp LGUI
 &kp LC(N)  &kp COMMA  &aholdtap LS(N7) N7        &aholdtap LS(N8) N8        &aholdtap LS(N9) N9        &kp EQUAL      &mkp RCLK  &kp LC(PAGE_UP)    &kp LC(UP_ARROW)  &kp UP_ARROW    &kp LC(DOWN_ARROW)  &trans   &trans
 &kp LC(Y)  &kp MINUS  &aholdtap LS(N4) NUMBER_4  &aholdtap LS(N5) N5        &aholdtap LS(N6) NUMBER_6  &kp LS(EQUAL)  &mkp MCLK  &kp LC(PAGE_DOWN)  &kp LEFT_ARROW    &kp DOWN_ARROW  &kp RIGHT_ARROW     &trans   &trans
-&trans     &kp DOT    &aholdtap LS(N1) NUMBER_1  &aholdtap LS(N2) NUMBER_2  &aholdtap LS(N3) NUMBER_3  &kp aholdtap LS(N0) NUMBER_0         &mkp LCLK  &kp HOME           &kp PAGE_UP       &mkp MB4        &kp PAGE_DOWN       &kp END  &trans
+&trans     &kp DOT    &aholdtap LS(N1) NUMBER_1  &aholdtap LS(N2) NUMBER_2  &aholdtap LS(N3) NUMBER_3  &aholdtap LS(N0) NUMBER_0         &mkp LCLK  &kp HOME           &kp PAGE_UP       &mkp MB4        &kp PAGE_DOWN       &kp END  &trans
            &trans     &trans                     &trans                     &trans                     &trans                    &trans           &trans          &trans        &trans              &trans
             >;
         };
