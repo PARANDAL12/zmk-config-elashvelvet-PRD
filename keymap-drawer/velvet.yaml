@@ -26,7 +26,7 @@ layers:
   - O
   - {t: '''', s: '"'}
   - {t: '[', s: '{'}
-  - {t: '$$mdi:apple-keyboard-option$$', h: MOUSE}
+  - {t: '$$mdi:apple-keyboard-option$$', h: RIGHT}
   - {t: A, h: '$$mdi:apple-keyboard-option$$'}
   - {t: S, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: D, s: Ctl+Sft+A}
@@ -81,7 +81,7 @@ layers:
   - {t: '8', h: Sft+8, s: '*'}
   - {t: '9', h: Sft+9, s: (}
   - {t: '=', s: +}
-  - '&mkp RCLK'
+  - {t: ▽, type: trans}
   - Ctl+PgUp
   - Ctl+$$mdi:arrow-up$$
   - $$mdi:arrow-up$$
@@ -94,7 +94,7 @@ layers:
   - {t: '5', h: Sft+5, s: '%'}
   - {t: '6', h: Sft+6, s: ^}
   - {t: Sft+=, s: Sft++}
-  - '&mkp MCLK'
+  - {t: ▽, type: trans}
   - Ctl+PgDn
   - $$mdi:arrow-left$$
   - $$mdi:arrow-down$$
@@ -107,8 +107,8 @@ layers:
   - {t: '2', h: Sft+2, s: '@'}
   - {t: '3', h: Sft+3, s: '#'}
   - {t: '0', h: Sft+0, s: )}
-  - '&mkp LCLK'
-  - Home
+  - {t: ▽, type: trans}
+  - {t: Home, h: SCROLL}
   - PgUp
   - '&mkp MB4'
   - PgDn
@@ -127,7 +127,7 @@ layers:
   FN:
   - {t: '`', s: '~'}
   - {t: ▽, type: trans}
-  - INS
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -170,13 +170,13 @@ layers:
   - {t: Alt+3, s: Alt+#}
   - Alt+F11
   - {t: ▽, type: trans}
-  - Home
+  - {t: Home, h: SCROLL}
   - PgUp
   - '&mkp MB4'
   - PgDn
   - End
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - INSERT
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
@@ -274,7 +274,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: '$$mdi:apple-keyboard-option$$', type: held}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -336,7 +336,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {type: held alternate}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -365,10 +365,10 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - '&mkp MCLK'
-  - '&mkp LCLK'
+  - {t: '&mkp MCLK', type: held alternate}
+  - {t: '&mkp LCLK', type: held alternate}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {type: held alternate}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -398,7 +398,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {type: held}
   - P
   - L
   - K
