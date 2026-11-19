@@ -12,7 +12,7 @@ layers:
   - PgUp
   - PgDn
   - {t: \, s: '|'}
-  - '&tog3'
+  - {t: GAME, h: to}
   - $$mdi:apple-keyboard-caps$$
   - B
   - {t: W, s: Sft+Ctl+S}
@@ -341,8 +341,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - '&mkp MB5'
+  - '&mkp RCLK'
   - '&mkp MCLK'
   - '&mkp MB5'
   - {t: ▽, type: trans}
@@ -353,7 +353,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - '&mkp MB4'
   - {type: held alternate}
   - {t: ▽, type: trans}
   - {type: held}
