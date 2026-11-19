@@ -10,7 +10,9 @@
 #define NUM 1
 #define FN 2
 #define GAME 3
-#define EXTRA 4
+#define MOUSE 4
+#define SCROLL 5
+#define RIGHT 6
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 1200
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 35
 
@@ -46,7 +48,7 @@
 };
 
 &mt {
-    tapping-term-ms = <200>;
+    tapping-term-ms = <180>;
     flavor = "tap-preferred";
 };
 
@@ -292,27 +294,28 @@
     keymap {
         compatible = "zmk,keymap";
 
+        /* Rotary encoder: clockwise = scroll up, counter-clockwise = scroll down. */
+        sensor-bindings = <&msc SCRL_UP &msc SCRL_DOWN>;
+
         BASE {
             label = "BASE";
             bindings = <
-&aholdtap LS(SEMI) SEMI  &aholdtap LS(APOS) APOS  &holdtap FSLH TILDE  &kp ESC   &kp LS(N9)   &kp LS(N0)              &kp HOME   &kp END      &kp PAGE_UP    &kp PAGE_DOWN  &kp BSLH  &kp LGUI
-&kp CAPS                 &kp B                    &CTRL_W              &ALT_E    &ALT_R       &ALT_T       &mkp RCLK  &kp Y      &kp U        &kp I          &kp O          &kp SQT   &kp LBKT
-&lt 4 RIGHT_ALT          &aholdtap LEFT_ALT A     &mt LSHFT S          &SHIFT_D  &shift_F     &mt LCTRL G  &mkp MCLK  &kp H      &kp J        &kp K          &kp L          &kp P     &kp RBKT
-&kp DEL                  &aholdtap LS(Q) Q        &SHIFT_Z             &ALT_X    &shift_c     &shift_v     &tog 5     &kp B      &kp N        &kp M          &kp COMMA      &kp DOT   &kp LS(FSLH)
-                         &kp RCTRL                &kp LALT             &kp BSPC  &lt 2 SPACE  &lt 1 ENTER             &mkp LCLK  &lt 2 SPACE  &kp BACKSPACE  &mkp RCLK      &tog 3
+&aholdtap LS(SEMI) SEMI  &aholdtap LS(APOS) APOS  &holdtap FSLH TILDE  &kp ESC   &kp LS(N9)   &kp LS(N0)              &kp HOME     &kp END      &kp PAGE_UP    &kp PAGE_DOWN  &kp BSLH  &tog3
+&kp CAPS                 &kp B                    &CTRL_W              &ALT_E    &ALT_R       &ALT_T       &mkp RCLK  &kp Y        &kp U        &kp I          &kp O          &kp SQT   &kp LBKT
+&lt 4 RIGHT_ALT          &aholdtap LEFT_ALT A     &mt LSHFT S          &SHIFT_D  &shift_F     &mt LCTRL G  &mkp MCLK  &kp H        &kp J        &kp K          &kp L          &kp P     &kp RBKT
+&kp DEL                  &aholdtap LS(Q) Q        &SHIFT_Z             &ALT_X    &shift_c     &shift_v     &mkp LCLK  &kp lt 5 B        &kp N        &kp M          &kp COMMA      &kp DOT   &kp LS(FSLH)
+                         &kp RCTRL                &kp LALT             &kp BSPC  &lt 2 SPACE  &lt 1 ENTER             &lt 1 LCLK  &lt 2 SPACE  &kp  ENTER  &RCLK         &kp BSPC
             >;
-
-            sensor-bindings = <&inc_dec_kp 0 0>;
         };
 
         NUM {
             label = "NUM";
             bindings = <
-&trans     &trans     &trans                     &trans                     &trans                     &trans                    &trans             &trans            &trans          &trans              &trans   &trans
+&trans     &trans     &trans                     &trans                     &trans                     &trans                    &trans             &trans            &trans          &trans              &trans   &kp LGUI
 &kp LC(N)  &kp COMMA  &aholdtap LS(N7) N7        &aholdtap LS(N8) N8        &aholdtap LS(N9) N9        &kp EQUAL      &mkp RCLK  &kp LC(PAGE_UP)    &kp LC(UP_ARROW)  &kp UP_ARROW    &kp LC(DOWN_ARROW)  &trans   &trans
 &kp LC(Y)  &kp MINUS  &aholdtap LS(N4) NUMBER_4  &aholdtap LS(N5) N5        &aholdtap LS(N6) NUMBER_6  &kp LS(EQUAL)  &mkp MCLK  &kp LC(PAGE_DOWN)  &kp LEFT_ARROW    &kp DOWN_ARROW  &kp RIGHT_ARROW     &trans   &trans
 &trans     &kp DOT    &aholdtap LS(N1) NUMBER_1  &aholdtap LS(N2) NUMBER_2  &aholdtap LS(N3) NUMBER_3  &kp N0         &mkp LCLK  &kp HOME           &kp PAGE_UP       &mkp MB4        &kp PAGE_DOWN       &kp END  &trans
-           &trans     &trans                     &trans                     &trans                     &trans                    &mkp LCLK          &mkp MCLK         &mkp RCLK       &trans              &trans
+           &trans     &trans                     &trans                     &trans                     &trans                    &trans           &trans          &trans        &trans              &trans
             >;
         };
 
@@ -320,54 +323,54 @@
             label = "FN";
             bindings = <
 &kp GRAVE  &trans  &kp INS  &trans  &trans      &trans                  &trans             &trans       &trans     &trans         &trans   &trans
-&kp LC(N)  &kp F1  &kp F2   &kp F3  &kp LC(R)   &kp LC(T)    &mkp RCLK  &kp LC(PAGE_UP)    &kp LC(UP)   &kp UP     &kp LC(DOWN)   &trans   &trans
-&kp LC(Y)  &kp F7  &kp F5   &kp F6  &kp LC(F)   &kp LC(G)    &mkp MCLK  &kp LC(PAGE_DOWN)  &kp LEFT     &kp DOWN   &kp RIGHT      &trans   &trans
-&trans     &kp F4  &kp F8   &kp F9  &kp LA(N3)  &kp LA(F11)  &mkp LCLK  &kp HOME           &kp PAGE_UP  &mkp MB4   &kp PAGE_DOWN  &kp END  &trans
-           &trans  &trans   &trans  &trans      &trans                  &mkp LCLK          &mkp MCLK    &mkp RCLK  &trans         &trans
+&kp LC(N)  &kp F1  &kp F2   &kp F3  &kp LC(R)   &kp LC(T)    &trans   &kp LC(PAGE_UP)    &kp LC(UP)   &kp UP     &kp LC(DOWN)   &trans   &trans
+&kp LC(Y)  &kp F7  &kp F5   &kp F6  &kp LC(F)   &kp LC(G)    &trans   &kp LC(PAGE_DOWN)  &kp LEFT     &kp DOWN   &kp RIGHT      &trans   &trans
+&trans     &kp F4  &kp F8   &kp F9  &kp LA(N3)  &kp LA(F11)  &trans   &kp HOME           &kp PAGE_UP  &mkp MB4   &kp PAGE_DOWN  &kp END  &trans
+           &trans  &trans   &trans  &trans      &trans                  &trans           &trans     &trans   &trans         &trans
             >;
         };
 
         GAME {
             label = "GAME";
             bindings = <
-&kp ESC    &kp N1  &kp N2  &kp N3    &kp N4     &kp N5                &trans     &trans  &trans  &trans  &trans  &trans
-&kp TAB    &kp Q   &kp W   &kp E     &kp R      &kp T      &mkp RCLK  &trans     &trans  &trans  &trans  &trans  &trans
-&kp LSHFT  &kp A   &kp S   &kp D     &kp F      &kp G      &mkp MCLK  &trans     &trans  &trans  &trans  &trans  &trans
-&kp LCTRL  &kp B   &kp Z   &kp X     &kp C      &kp V      &mkp LCLK  &trans     &trans  &trans  &trans  &trans  &trans
-           &kp N   &kp M   &kp BSPC  &kp SPACE  &kp ENTER             &tog GAME  &trans  &trans  &trans  &trans
+&kp ESC    &kp N1  &kp N2  &kp N3    &kp N4     &kp N5                &kp N6     &kp N7  &kp N8  &kp N9  &kp N0  &trans
+&kp TAB    &kp Q   &kp W   &kp E     &kp R      &kp T      &trans   &trans     &trans  &trans  &trans  &trans  &trans
+&kp LSHFT  &kp A   &kp S   &kp D     &kp F      &kp G      &trans   &trans     &trans  &trans  &trans  &trans  &trans
+&kp LCTRL  &kp B   &kp Z   &kp X     &kp C      &kp V      &trans   &trans     &trans  &trans  &trans  &trans  &trans
+           &trans  &trans   &trans  &trans      &trans                  &trans           &trans     &trans   &kp LALT         &trans
             >;
         };
 
-        EXTRA {
-            label = "EXTRA";
+        MOUSE {
+            label = "MOUSE";
             bindings = <
-&trans  &trans   &trans     &trans  &trans  &trans             &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp B    &kp O      &kp I   &kp U   &kp Y   &mkp RCLK  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp P    &kp L      &kp K   &kp J   &kp H   &mkp MCLK  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp DOT  &kp COMMA  &kp M   &kp N   &trans  &mkp LCLK  &trans  &trans  &trans  &trans  &trans  &trans
-        &trans   &trans     &trans  &trans  &trans             &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans             &trans     &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans   &trans     &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &mkp MB5 &mkp MB3  &mkp MCLK &mkp MCLK  &mkp MB5 &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &mkp MB4 &mo 5    &trans   &trans     &mkp MB4 &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &mkp MCLK &mkp LCLK             &trans  &trans  &trans  &trans  &trans
             >;
         };
 
-        scroll {
-            label = "LAYER5";
+        SCROLL {
+            label = "SCROLL";
             bindings = <
-&trans  &trans  &trans         &trans    &trans       &trans             &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp PAGE_DOWN  &kp UP    &kp PAGE_UP  &trans  &mkp RCLK  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp LEFT       &kp DOWN  &kp RIGHT    &trans  &mkp MCLK  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans         &trans    &trans       &trans  &mkp LCLK  &trans  &trans  &trans  &trans  &trans  &trans
-        &trans  &trans         &trans    &trans       &trans             &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans             &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp PAGE_DOWN &kp UP   &kp PAGE_UP &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp LEFT  &kp DOWN &kp RIGHT &trans  &trans  &trans  &mkp MB5 &trans  &trans  &trans  &trans
+&trans  &trans  &trans    &trans   &trans    &trans  &trans  &trans  &mkp MB4 &trans  &trans  &trans  &trans
+        &trans  &trans    &trans   &trans    &trans             &trans  &trans  &trans  &trans  &trans
             >;
         };
 
-        LAYER6 {
-            label = "LAYER6";
+        RIGHT {
+            label = "RIGHT";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans             &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &mkp RCLK  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &mkp MCLK  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &mkp LCLK  &trans  &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans             &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans             &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp O   &kp I   &kp U   &kp Y   &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&kp BSLH &kp SQT &kp L  &kp K   &kp J   &kp H   &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp P   &kp LESS &kp M &kp N &kp B     &trans  &trans  &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &kp LBRC &kp RBRC &trans             &trans  &trans  &trans  &trans  &trans
             >;
         };
 
