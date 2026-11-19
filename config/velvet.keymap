@@ -12,7 +12,7 @@
 #define GAME 3
 #define MOUSE 4
 #define SCROLL 5
-#define RIGHT 6
+#define RIT 6
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 1200
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 35
 
@@ -363,7 +363,7 @@
             >;
         };
 
-        RIGHT {
+        RIT {
             label = "RIGHT";
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans              &trans  &trans  &trans  &trans  &trans  &trans
