@@ -57,10 +57,10 @@ layers:
   - {t: '$$mdi:backspace-outline$$', type: backspace}
   - {t: '$$mdi:keyboard-space$$', h: FN}
   - {t: '$$mdi:keyboard-return$$', h: NUM}
-  - {t: LCLK, h: NUM}
+  - '&mkp LCLK'
   - {t: '$$mdi:keyboard-space$$', h: FN}
   - {t: '$$mdi:keyboard-return$$', type: enter}
-  - '&RCLK'
+  - '&mkp RCLK'
   - {t: '$$mdi:backspace-outline$$', type: backspace}
   NUM:
   - {t: ▽, type: trans}
@@ -119,7 +119,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
-  - {type: held alternate}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
