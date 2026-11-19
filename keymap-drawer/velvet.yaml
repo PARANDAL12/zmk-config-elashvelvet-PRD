@@ -106,7 +106,7 @@ layers:
   - {t: '1', h: Sft+1, s: '!'}
   - {t: '2', h: Sft+2, s: '@'}
   - {t: '3', h: Sft+3, s: '#'}
-  - aholdtap LS(0) 0
+  - {t: '0', h: Sft+0, s: )}
   - '&mkp LCLK'
   - Home
   - PgUp
