@@ -304,7 +304,7 @@
 &kp CAPS                 &kp B                    &CTRL_W              &ALT_E    &ALT_R       &ALT_T       &mkp RCLK  &kp Y        &kp U        &kp I          &kp O          &kp SQT   &kp LBKT
 &lt 4 RIGHT_ALT          &aholdtap LEFT_ALT A     &mt LSHFT S          &SHIFT_D  &shift_F     &mt LCTRL G  &mkp MCLK  &kp H        &kp J        &kp K          &kp L          &kp P     &kp RBKT
 &kp DEL                  &aholdtap LS(Q) Q        &SHIFT_Z             &ALT_X    &shift_c     &shift_v     &mkp LCLK  &lt 5 B        &kp N        &kp M          &kp COMMA      &kp DOT   &kp LS(FSLH)
-                         &kp RCTRL                &kp LALT             &kp BSPC  &lt 2 SPACE  &lt 1 ENTER             &lt 1 LCLK  &lt 2 SPACE  &kp  ENTER  &RCLK         &kp BSPC
+                         &kp RCTRL                &kp LALT             &kp BSPC  &lt 2 SPACE  &lt 1 ENTER             &mkp LCLK  &lt 2 SPACE  &kp  ENTER  &mkp RCLK         &kp BSPC
             >;
         };
 
