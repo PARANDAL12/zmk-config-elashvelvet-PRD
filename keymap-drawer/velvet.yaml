@@ -386,7 +386,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: \, s: '|'}
-  - '&SQT'
+  - {t: '''', s: '"'}
   - O
   - I
   - U
