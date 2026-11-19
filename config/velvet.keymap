@@ -344,7 +344,7 @@
         MOUSE {
             label = "MOUSE";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans             &trans     &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans   &trans     &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &mkp MB5 &mkp MB3  &mkp MCLK &mkp MCLK  &mkp MB5 &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &mkp MB4 &mo 5    &trans   &trans     &mkp MB4 &trans  &trans  &trans  &trans
@@ -355,7 +355,7 @@
         SCROLL {
             label = "SCROLL";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans             &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans              &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &kp PAGE_DOWN &kp UP   &kp PAGE_UP &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &kp LEFT  &kp DOWN &kp RIGHT &trans  &trans  &trans  &mkp MB5 &trans  &trans  &trans  &trans
 &trans  &trans  &trans    &trans   &trans    &trans  &trans  &trans  &mkp MB4 &trans  &trans  &trans  &trans
@@ -366,7 +366,7 @@
         RIGHT {
             label = "RIGHT";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans             &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans              &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &kp O   &kp I   &kp U   &kp Y   &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &kp BSLH &kp SQT &kp L  &kp K   &kp J   &kp H   &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &kp P   &kp LESS &kp M &kp N &kp B     &trans  &trans  &trans  &trans  &trans  &trans  &trans
