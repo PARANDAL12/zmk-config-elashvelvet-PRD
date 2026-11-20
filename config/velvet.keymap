@@ -194,8 +194,14 @@
             #binding-cells = <0>;
             mods = <(MOD_LALT)>;
         };
+        
+        rot_msc: sensor_rotate_msc {
+            compatible = "zmk,behavior-sensor-rotate-var";
+            #sensor-binding-cells = <2>;
+            bindings = <&msc>, <&msc>;
+            tap-ms = <20>;
+        };
     };
-
     combos {
         compatible = "zmk,combos";
 
@@ -304,7 +310,7 @@
                          &kp RCTRL                &kp LALT             &kp BSPC  &lt 2 SPACE  &lt 1 ENTER             &mkp LCLK  &lt 2 SPACE  &kp ENTER    &mkp RCLK      &kp BSPC
             >;
 /* Rotary encoder: clockwise = scroll up, counter-clockwise = scroll down. */
-            sensor-bindings = <&inc_dec_kp K_SCROLL_DOWN K_SCROLL_UP>;
+            sensor-bindings = <&rot_msc SCRL_UP SCRL_DOWN>;
         };
 
         NUM {
@@ -317,7 +323,7 @@
            &trans     &trans                     &trans                     &trans                     &trans                             &trans             &trans            &trans          &trans              &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp K_SCROLL_DOWN K_SCROLL_UP>;
+            sensor-bindings = <&rot_msc SCRL_UP SCRL_DOWN>;
         };
 
         FN {
@@ -330,7 +336,7 @@
            &kp INSERT  &trans  &trans  &trans      &trans               &trans             &trans       &trans    &trans         &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp K_SCROLL_DOWN K_SCROLL_UP>;
+            sensor-bindings = <&rot_msc SCRL_UP SCRL_DOWN>;
         };
 
         GAME {
@@ -343,7 +349,7 @@
            &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &kp LALT  &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp K_SCROLL_DOWN K_SCROLL_UP>;
+            sensor-bindings = <&rot_msc SCRL_UP SCRL_DOWN>;
         };
 
         MOUSE {
