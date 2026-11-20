@@ -2,7 +2,6 @@
 #include <dt-bindings/zmk/input_transform.h>
 #include <input/processors.dtsi>
 #include <input/processors/runtime-input-processor.dtsi>
-#include <behaviors/input_gestures_accel.dtsi>
 
 &pinctrl {
     spi1_default: spi1_default {
@@ -43,15 +42,6 @@
         y-input-code = <INPUT_REL_Y>;
     };
 };
- &pointer_accel {
-     input-type = <INPUT_EV_REL>;
-     min-factor = <300>;
-     max-factor = <1000>;
-     speed-threshold = <600>;
-     speed-max = <1800>;
-     acceleration-exponent = <2>;
-     track-remainders;
- };
 
 
 &pointer_accel {
@@ -84,7 +74,7 @@
         status = "okay";
         compatible = "zmk,input-listener";
         device = <&trackball>;
-        input-processors = <&zip_rotate_27 &pointer_accel &mouse_runtime_input_processor>;
+        input-processors = <&zip_rotate_27 &mouse_runtime_input_processor>;
 
         scroller {
             layers = <5>;
