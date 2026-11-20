@@ -1,9 +1,8 @@
-dts
 #include <zephyr/dt-bindings/input/input-event-codes.h>
 #include <dt-bindings/zmk/input_transform.h>
 #include <input/processors.dtsi>
 #include <input/processors/runtime-input-processor.dtsi>
-#include <behaviors/input_gestures_accel.dtsi>
+#include <input/processors/acceleration.dtsi>
 
 &pinctrl {
     spi1_default: spi1_default {
@@ -47,12 +46,13 @@ dts
 
 &pointer_accel {
     input-type = <INPUT_EV_REL>;
-    min-factor = <300>;       /* 아주 천천히 굴릴 때 0.3배 속도 (정밀 스나이퍼 모드) */
+    codes = <INPUT_REL_X INPUT_REL_Y>;
+    sensitivity = <1000>;
+    min-factor = <300>;       /* 아주 천천히 굴릴 때 0.3배 속도 (정밀 조준) */
     max-factor = <1000>;      /* 빠르게 굴릴 때 최대 1.0배 속도 */
     speed-threshold = <600>;  /* 감속 구간 기준 */
     speed-max = <1800>;       /* 최고 속도 도달 기준 */
     acceleration-exponent = <2>;
-    track-remainders;
 };
 
 / {
