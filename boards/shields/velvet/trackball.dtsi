@@ -46,7 +46,7 @@
 / {
         zip_rotate_27: zip_rotate_27 {
             compatible = "zmk,input-processor-runtime";
-            processor-label = "rotate_27";
+            processor-label = "rot27";
             #input-processor-cells = <0>;
             type = <INPUT_EV_REL>;
             x-codes = <INPUT_REL_X>;
