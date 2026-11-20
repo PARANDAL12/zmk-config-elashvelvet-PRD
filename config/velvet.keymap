@@ -294,10 +294,6 @@
     keymap {
         compatible = "zmk,keymap";
 
-        /* Rotary encoder: clockwise = scroll up, counter-clockwise = scroll down. */
-
-        sensor-bindings = <&msc SCRL_UP &msc SCRL_DOWN>;
-
         BASE {
             label = "BASE";
             bindings = <
@@ -307,8 +303,8 @@
 &kp DEL                  &aholdtap LS(Q) Q        &SHIFT_Z             &ALT_X    &shift_c     &shift_v     &mkp LCLK  &lt 5 B    &kp N        &kp M        &kp COMMA      &kp DOT   &kp LS(FSLH)
                          &kp RCTRL                &kp LALT             &kp BSPC  &lt 2 SPACE  &lt 1 ENTER             &mkp LCLK  &lt 2 SPACE  &kp ENTER    &mkp RCLK      &kp BSPC
             >;
-
-            sensor-bindings = <&inc_dec_kp K_SCROLL_DOWN K_SCROLL_UP>;
+/* Rotary encoder: clockwise = scroll up, counter-clockwise = scroll down. */
+            sensor-bindings = <&msc SCRL_UP &msc SCRL_DOWN>;
         };
 
         NUM {
