@@ -76,3 +76,9 @@
         };
     };
 };
+ &mouse_runtime_input_processor {
+        temp-layer-enabled;
+        temp-layer = <4>;
+        temp-layer-activation-delay-ms = <100>;
+        temp-layer-deactivation-delay-ms = <500>;
+    };
