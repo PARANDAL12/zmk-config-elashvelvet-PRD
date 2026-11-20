@@ -304,7 +304,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - '&mkp MCLK'
-  - {t: ▽, type: trans}
+  - '&mkp LCLK'
   - '&mkp LCLK'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
