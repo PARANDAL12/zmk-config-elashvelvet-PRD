@@ -51,8 +51,8 @@
             type = <INPUT_EV_REL>;
             x-codes = <INPUT_REL_X>;
             y-codes = <INPUT_REL_Y>;
-            scale-multiplier = <3>;
-            scale-divisor = <4>;
+            scale-multiplier = <7>;
+            scale-divisor = <10>;
             rotation-degrees = <27>;
             track-remainders;
         };
