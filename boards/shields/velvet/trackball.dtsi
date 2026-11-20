@@ -82,3 +82,8 @@
         temp-layer-activation-delay-ms = <100>;
         temp-layer-deactivation-delay-ms = <500>;
     };
+&scroll_runtime_input_processor {
+    axis-snap-mode = <2>;
+    axis-snap-threshold = <100>;
+    axis-snap-timeout-ms = <1000>;
+};
