@@ -2,6 +2,7 @@
 #include <dt-bindings/zmk/input_transform.h>
 #include <input/processors.dtsi>
 #include <input/processors/runtime-input-processor.dtsi>
+#include <input/processors/acceleration.dtsi>
 
 &pinctrl {
     spi1_default: spi1_default {
@@ -44,17 +45,42 @@
 };
 
 / {
+    input_processors {
+        zip_rotate_27: zip_rotate_27 {
+            compatible = "zmk,input-processor-runtime";
+            processor-label = "rotate_27";
+            type = <INPUT_EV_REL>;
+            x-codes = <INPUT_REL_X>;
+            y-codes = <INPUT_REL_Y>;
+            scale-multiplier = <1>;
+            scale-divisor = <1>;
+            rotation-degrees = <27>;
+            track-remainders;
+        };
+    };
+
     trackball_listener {
         status = "okay";
         compatible = "zmk,input-listener";
         device = <&trackball>;
-        input-processors = <&mouse_runtime_input_processor>;
+        input-processors = <&zip_rotate_27 &mouse_runtime_input_processor &pointer_accel>;
 
         scroller {
             layers = <5>;
             input-processors =
-                <&zip_xy_to_scroll_mapper &scroll_runtime_input_processor>,
+                <&zip_rotate_27 &zip_xy_to_scroll_mapper &scroll_runtime_input_processor>,
                 <&zip_scroll_transform INPUT_TRANSFORM_Y_INVERT>;
         };
     };
+};
+
+&pointer_accel {
+    input-type = <INPUT_EV_REL>;
+    codes = <INPUT_REL_X INPUT_REL_Y>;
+    sensitivity = <750>;      /* 기본 감도 75% (기존 CPI 1600의 75%인 1200 체감) */
+    min-factor = <300>;       /* 아주 천천히 굴릴 때 최소 배율 (정밀 스나이퍼 감속) */
+    max-factor = <1400>;      /* 빠르게 굴릴 때 최대 배율 */
+    speed-threshold = <600>;  /* 감속 구간과 일반 속도 구간 기준 */
+    speed-max = <1800>;       /* 최고 속도 도달 기준 */
+    acceleration-exponent = <2>;
 };
