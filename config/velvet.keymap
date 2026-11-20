@@ -359,7 +359,7 @@
 &trans  &trans  &trans  &trans  &trans     &trans     &trans     &trans     &trans    &trans  &trans     &trans  &trans
 &trans  &trans  &trans  &trans  &mkp MB5   &mkp RCLK  &mkp MCLK  &mkp MCLK  &mkp MB5  &trans  &trans     &trans  &trans
 &trans  &trans  &trans  &trans  &mkp MB4   &mo 5      &trans     &trans     &mkp MB4  &trans  &trans     &trans  &trans
-        &trans  &trans  &trans  &mkp MCLK  &trans             &mkp LCLK  &trans    &trans  &mkp RCLK  &trans
+        &trans  &trans  &trans  &mkp MCLK  &mkp LCLK             &mkp LCLK  &trans    &trans  &mkp RCLK  &trans
             >;
         };
 
