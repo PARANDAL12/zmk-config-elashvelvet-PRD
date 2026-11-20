@@ -86,4 +86,4 @@ manifest:
     - name: zmk-pointing-acceleration
       remote: oleksandrmaslov
       revision: main
-      import: true
+    
