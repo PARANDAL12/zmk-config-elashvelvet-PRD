@@ -5,17 +5,17 @@ manifest:
     revision: main
   remotes:
     - name: cormoran
-      url-base: https://github.com
+      url-base: https://github.com/cormoran
     - name: zmkfirmware
-      url-base: https://github.com
+      url-base: https://github.com/zmkfirmware
     - name: mctechnology17
-      url-base: https://github.com
+      url-base: https://github.com/mctechnology17
     - name: infused-kim
       url-base: https://github.com/infused-kim
     - name: gpeye
       url-base: https://github.com/GPeye
     - name: oleksandrmaslov
-      url-base: https://github.com
+      url-base: https://github.com/oleksandrmaslov
   projects:
     - name: zmk
       remote: cormoran
