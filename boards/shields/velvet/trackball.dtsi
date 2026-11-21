@@ -63,11 +63,12 @@
         device = <&trackball>;
         input-processors = <&zip_rotate_27 &mouse_runtime_input_processor>;
 
-        scroller {
+           scroller {
             layers = <5>;
             input-processors =
-                <&zip_rotate_27 &zip_xy_to_scroll_mapper &scroll_runtime_input_processor>,
-                <&zip_scroll_transform INPUT_TRANSFORM_Y_INVERT>;
+                <&zip_rotate_27 &zip_xy_to_scroll_mapper>,
+                <&zip_scroll_transform INPUT_TRANSFORM_Y_INVERT>,
+                <&scroll_runtime_input_processor>;
         };
 
         snipe {
