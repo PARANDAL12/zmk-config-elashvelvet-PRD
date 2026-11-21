@@ -89,7 +89,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - Ctl+Y
-  - {t: '-', s: _}
+  - {t: '-', h: Sft+-, s: _}
   - {t: '4', h: Sft+4, s: $}
   - {t: '5', h: Sft+5, s: '%'}
   - {t: '6', h: Sft+6, s: ^}
