@@ -209,91 +209,91 @@
             bindings = <&kp LC(X)>;
             key-positions = <27 28>;
             layers = <BASE>;
-            timeout-ms = <50>;
+            timeout-ms = <70>;
         };
 
         combo_ctrl_c_df {
             bindings = <&kp LC(C)>;
             key-positions = <28 29>;
             layers = <BASE>;
-            timeout-ms = <50>;
+            timeout-ms = <70>;
         };
 
         combo_ctrl_v_fg {
             bindings = <&kp LC(V)>;
             key-positions = <29 30>;
             layers = <BASE>;
-            timeout-ms = <50>;
+            timeout-ms = <70>;
         };
 
         combo_ctrl_z_sf {
             bindings = <&kp LC(Z)>;
             key-positions = <27 29>;
             layers = <BASE>;
-            timeout-ms = <50>;
+            timeout-ms = <70>;
         };
 
         combo_esc_tr {
             bindings = <&kp ESC>;
             key-positions = <16 17>;
             layers = <BASE>;
-            timeout-ms = <50>;
+            timeout-ms = <70>;
         };
 
         combo_tab_re {
             bindings = <&kp TAB>;
             key-positions = <15 16>;
             layers = <BASE>;
-            timeout-ms = <50>;
+            timeout-ms = <70>;
         };
 
         combo_shift_w_we {
             bindings = <&kp LS(W)>;
             key-positions = <14 15>;
             layers = <BASE>;
-            timeout-ms = <50>;
+            timeout-ms = <70>;
         };
 
         combo_shift_q_qs {
             bindings = <&kp LS(Q)>;
             key-positions = <27 39>;
             layers = <BASE>;
-            timeout-ms = <50>;
+            timeout-ms = <70>;
         };
 
         combo_bspc_xc {
             bindings = <&kp BSPC>;
             key-positions = <41 42>;
             layers = <BASE>;
-            timeout-ms = <50>;
+            timeout-ms = <70>;
         };
 
         combo_ctrl_c_f6cf {
             bindings = <&kp LC(C)>;
             key-positions = <28 29>;
             layers = <FN>;
-            timeout-ms = <50>;
+            timeout-ms = <70>;
         };
 
         combo_ctrl_v_cfcg {
             bindings = <&kp LC(V)>;
             key-positions = <29 30>;
             layers = <FN>;
-            timeout-ms = <50>;
+            timeout-ms = <70>;
         };
 
         combo_ctrl_x_f5f6 {
             bindings = <&kp LC(X)>;
             key-positions = <27 28>;
             layers = <FN>;
-            timeout-ms = <50>;
+            timeout-ms = <70>;
         };
 
         combo_ctrl_z_f5cf {
             bindings = <&kp LC(Z)>;
             key-positions = <27 29>;
             layers = <FN>;
-            timeout-ms = <50>;
+            timeout-ms = <70>;
         };
     };
 
