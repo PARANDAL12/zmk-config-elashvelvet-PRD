@@ -14,7 +14,7 @@ layers:
   - {t: \, s: '|'}
   - {t: GAME, h: to}
   - $$mdi:apple-keyboard-caps$$
-  - B
+  - {t: B, h: SCROLL}
   - {t: W, s: Sft+Ctl+S}
   - {t: E, s: Alt+Ctl+End}
   - {t: R, s: Sft+Alt+G}
@@ -324,7 +324,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -356,7 +356,7 @@ layers:
   - '&mkp MB4'
   - {type: held alternate}
   - {t: ▽, type: trans}
-  - {type: held}
+  - {type: held alternate}
   - '&mkp MB4'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
