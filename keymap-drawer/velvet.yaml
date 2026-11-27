@@ -623,40 +623,19 @@ layers:
 combos:
 - p: [27, 28]
   k: Ctl+X
-  l: [BASE]
 - p: [28, 29]
   k: Ctl+C
-  l: [BASE]
 - p: [29, 30]
   k: Ctl+V
-  l: [BASE]
 - p: [27, 29]
   k: Ctl+Z
-  l: [BASE]
 - p: [16, 17]
   k: Esc
-  l: [BASE]
 - p: [15, 16]
   k: $$mdi:keyboard-tab$$
-  l: [BASE]
 - p: [14, 15]
   k: Sft+W
-  l: [BASE]
 - p: [27, 39]
   k: Sft+Q
-  l: [BASE]
 - p: [41, 42]
   k: {t: '$$mdi:backspace-outline$$', type: backspace}
-  l: [BASE]
-- p: [28, 29]
-  k: Ctl+C
-  l: [FN]
-- p: [29, 30]
-  k: Ctl+V
-  l: [FN]
-- p: [27, 28]
-  k: Ctl+X
-  l: [FN]
-- p: [27, 29]
-  k: Ctl+Z
-  l: [FN]
